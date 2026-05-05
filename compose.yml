@@ -96,6 +96,8 @@ services:
   events:
     image: ghcr.io/stoatchat/events:v0.12.0
     env_file: secrets.env
+    environment:
+      HOST: "0.0.0.0:14703"
     depends_on:
       database:
         condition: service_healthy
