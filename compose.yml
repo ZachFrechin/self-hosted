@@ -224,6 +224,9 @@ services:
   # Web App
   web:
     # for-web v0.5.0
-    image: ghcr.io/stoatchat/for-web:latest
+    image: ghcr.io/stoatchat/for-legacy-web:master
+    environment:
+      VITE_API_URL: "https://chat.origoapp.online/api"
+      VITE_THEMES_URL: "https://themes.revolt.chat"
     restart: always
     env_file: .env.web
